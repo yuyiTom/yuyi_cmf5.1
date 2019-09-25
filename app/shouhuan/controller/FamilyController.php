@@ -24,7 +24,6 @@ class FamilyController extends AdminBaseController
 
 		}
 		$count=$jtq_family->where($where)->count();
-
 		$lists=$jtq_family->where($where)->order('id desc')->paginate(20)->each(function($item, $key){
 
 			$token=$item['token'];
